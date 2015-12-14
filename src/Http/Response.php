@@ -20,10 +20,18 @@ class Response
         if (count($responseParts) == 4) {
             list($this->status, $this->iso2, $this->iso3, $this->name) = $responseParts;
         } else {
-            throw new \Exception('Inconsistent response from Ip2c');
+            throw new \Exception('Inconsistent response from Ip2c', 1);
         }
 
         return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function status()
+    {
+        return $this->status;
     }
 
     /**
