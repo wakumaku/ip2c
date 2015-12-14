@@ -2,7 +2,6 @@
 
 namespace Ip2c\Test\Unit;
 
-use Ip2c\Http\Http;
 use Ip2c\Http\Request;
 use Prophecy\Argument;
 
@@ -14,7 +13,7 @@ class RequestTest extends \PHPUnit_Framework_TestCase
 
     public function testShouldBeInstantiated()
     {
-        $this->sut = new Request($this->httpMock());
+        $this->sut = new Request($this->httpMock('response'));
         $this->assertInstanceOf('Ip2c\Http\Request', $this->sut);
     }
 
