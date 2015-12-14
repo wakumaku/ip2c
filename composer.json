@@ -1,0 +1,30 @@
+{
+  "name": "wakumaku/ip2c",
+  "description": "ip2c.org api",
+  "minimum-stability": "dev",
+  "license": "to kill",
+  "authors": [
+    {
+      "name": "wakumaku",
+      "email": "wakumaku@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.10",
+    "ext-curl": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.0",
+    "psr/log": "~1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Ip2c\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Ip2c\\Tests\\": "tests/"
+    }
+  }
+}
