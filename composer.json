@@ -14,6 +14,8 @@
     "ext-curl": "*"
   },
   "require-dev": {
+    "php": ">=5.5",
+    "ext-curl": "*",
     "phpunit/phpunit": "4.8.*"
   },
   "autoload": {
