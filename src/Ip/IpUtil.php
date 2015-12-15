@@ -19,8 +19,12 @@ class IpUtil
         $sumParts = array();
         $partIndex = 0;
         for ($exponent = 3; $exponent >= 0; $exponent--) {
-            $sumParts[] = pow(256, $exponent) * $parts[$partIndex];
-            $partIndex++;
+            if ($parts[$partIndex] > 0 && $parts[$partIndex] < 256) {
+                $sumParts[] = pow(256, $exponent) * $parts[$partIndex];
+                $partIndex++;
+            } else {
+                return false;
+            }
         }
 
         return array_sum($sumParts);
