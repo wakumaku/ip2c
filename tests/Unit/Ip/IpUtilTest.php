@@ -32,6 +32,13 @@ class IpUtilTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($ipDec, $ipCalculated);
     }
 
+    public function testShouldReturnFalse()
+    {
+        $this->assertFalse($this->sut->ip2long('123.456.'));
+        $this->assertFalse($this->sut->ip2long('123.456.654'));
+        $this->assertFalse($this->sut->ip2long('123.123.123.'));
+        $this->assertFalse($this->sut->ip2long('123.123.123.458'));
+    }
     public function ip2decValues()
     {
         $ips2test = array();
