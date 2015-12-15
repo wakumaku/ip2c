@@ -1,6 +1,9 @@
 {
   "name": "wakumaku/ip2c",
-  "description": "ip2c.org api",
+  "description":  "Small and simple library to resolve the country where an Ip comes from.",
+  "keywords":     ["ip to country", "ip2c", "whois", "dns", "ip", "country", "maxmind"],
+  "homepage":     "https://github.com/wakumaku/ip2c",
+  "type":         "library",
   "minimum-stability": "dev",
   "license": "to kill",
   "authors": [
