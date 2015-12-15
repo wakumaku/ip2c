@@ -15,14 +15,14 @@ class Ip2c
     /** @var Request */
     private $request;
     /** @var Response */
-    private $result;
+    private $response;
     /** @var IpUtil */
     private $ipUtil;
 
     public function __construct(Request $request, Response $response, IpUtil $ipUtil)
     {
         $this->request = $request;
-        $this->result = $response;
+        $this->response = $response;
         $this->ipUtil = $ipUtil;
     }
 
@@ -43,6 +43,6 @@ class Ip2c
 
     private function doRequest($queryString)
     {
-        return $this->result->parseResult($this->request->doRequest($this->ip2cBaseUrl, $queryString));
+        return $this->response->parseResult($this->request->doRequest($this->ip2cBaseUrl, $queryString));
     }
 }
