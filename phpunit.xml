@@ -1,0 +1,7 @@
+<testsuites>
+    <testsuite name="Ip2c Test Suite">
+        <directory>tests/*Test.php</directory>
+        <exclude>vendor</exclude>
+        <exclude>src</exclude>
+    </testsuite>
+</testsuites>
