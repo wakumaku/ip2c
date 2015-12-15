@@ -7,7 +7,7 @@ use Ip2c\Http\Response;
 
 class Ip2c
 {
-    private $apiEndPoint = 'http://ip2c.org';
+    private $ip2cBaseUrl = 'http://ip2c.org';
     private $queryStringSelf = 'self';
     private $queryStringDec = 'dec=';
 
@@ -39,6 +39,6 @@ class Ip2c
 
     private function doRequest($queryString)
     {
-        return $this->result->parseResult($this->request->doRequest($this->apiEndPoint, $queryString));
+        return $this->result->parseResult($this->request->doRequest($this->ip2cBaseUrl, $queryString));
     }
 }
