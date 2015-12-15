@@ -23,7 +23,7 @@ First, add Ip2c to the list of dependencies inside your `composer.json`:
 ```json
 {
     "require-dev": {
-        "wakumaku/prophecy": "~1.0"
+        "wakumaku/ip2c": "dev-master"
     }
 }
 ```
@@ -48,4 +48,36 @@ $result = array(
 );
 
 print_r($result);
+```
+
+Output:
+
+```
+Array
+(
+    [self] => Ip2c\Http\Response Object
+        (
+            [status:Ip2c\Http\Response:private] => 1
+            [iso2:Ip2c\Http\Response:private] => US
+            [iso3:Ip2c\Http\Response:private] => USA
+            [name:Ip2c\Http\Response:private] => United States
+        )
+
+    [ip] => Ip2c\Http\Response Object
+        (
+            [status:Ip2c\Http\Response:private] => 1
+            [iso2:Ip2c\Http\Response:private] => US
+            [iso3:Ip2c\Http\Response:private] => USA
+            [name:Ip2c\Http\Response:private] => United States
+        )
+
+    [dec] => Ip2c\Http\Response Object
+        (
+            [status:Ip2c\Http\Response:private] => 1
+            [iso2:Ip2c\Http\Response:private] => US
+            [iso3:Ip2c\Http\Response:private] => USA
+            [name:Ip2c\Http\Response:private] => United States
+        )
+
+)
 ```
