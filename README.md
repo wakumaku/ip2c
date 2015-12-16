@@ -22,7 +22,7 @@ First, add Ip2c to the list of dependencies inside your `composer.json`:
 
 ```json
 {
-    "require-dev": {
+    "require": {
         "wakumaku/ip2c": "dev-master"
     }
 }
