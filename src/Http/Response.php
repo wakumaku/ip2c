@@ -9,12 +9,17 @@ class Response
     private $iso3;
     private $name;
 
+    public function __construct($response)
+    {
+        $this->parseResult($response);
+    }
+
     /**
      * @param $response
-     * @return $this
+     * @return Response
      * @throws \Exception
      */
-    public function parseResult($response)
+    private function parseResult($response)
     {
         $responseParts = explode(';', $response);
         if (count($responseParts) == 4) {
@@ -22,12 +27,10 @@ class Response
         } else {
             throw new \Exception('Inconsistent response from Ip2c', 1);
         }
-
-        return $this;
     }
 
     /**
-     * @return string
+     * @return int
      */
     public function status()
     {

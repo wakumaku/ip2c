@@ -6,8 +6,8 @@ class IpUtil
 {
     /**
      * A*256^3 + B*256^2 + C*256 + D
-     * @param $ip
-     * @return int
+     * @param string $ip
+     * @return int|bool
      */
     public function ip2long($ip)
     {

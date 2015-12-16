@@ -10,8 +10,11 @@ use Ip2c\Ip\IpUtil;
 
 class Ip2cFactory
 {
+    /**
+     * @return Ip2c
+     */
     public static function build()
     {
-        return new Ip2c(new Request(new Http(new LibCurl())), new Response(), new IpUtil());
+        return new Ip2c(new Request(new Http(new LibCurl())), new IpUtil());
     }
 }

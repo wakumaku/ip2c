@@ -9,6 +9,10 @@ class Http
     /** @var LibCurl */
     private $libCurl;
 
+    /**
+     * Http constructor.
+     * @param LibCurl $libCurl
+     */
     public function __construct(LibCurl $libCurl)
     {
         $this->libCurl = $libCurl;
@@ -16,7 +20,7 @@ class Http
 
     /**
      * @param $url
-     * @return mixed
+     * @return string
      * @throws \Exception
      */
     public function request($url)
