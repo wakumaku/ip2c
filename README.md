@@ -37,47 +37,24 @@ $> composer update
 ## How to use it
 
 ```php
-include 'vendor/autoload.php';
+include vendor/autoload.php';
 
 $ip2c = \Ip2c\Ip2cFactory::build();
 
-$result = array(
-    'self' => $ip2c->self(),
-    'ip'   => $ip2c->ip('74.125.224.72'),
-    'dec'  => $ip2c->dec(1249763400),
-);
+$result = $ip2c->self();
 
-print_r($result);
+echo "Status: " . $result->status() . "\n";
+echo "Iso2: " . $result->iso2() . "\n";
+echo "Iso3: " . $result->iso3() . "\n";
+echo "Name: " . $result->name() . "\n";
+
 ```
 
 Output:
 
 ```
-Array
-(
-    [self] => Ip2c\Http\Response Object
-        (
-            [status:Ip2c\Http\Response:private] => 1
-            [iso2:Ip2c\Http\Response:private] => US
-            [iso3:Ip2c\Http\Response:private] => USA
-            [name:Ip2c\Http\Response:private] => United States
-        )
-
-    [ip] => Ip2c\Http\Response Object
-        (
-            [status:Ip2c\Http\Response:private] => 1
-            [iso2:Ip2c\Http\Response:private] => US
-            [iso3:Ip2c\Http\Response:private] => USA
-            [name:Ip2c\Http\Response:private] => United States
-        )
-
-    [dec] => Ip2c\Http\Response Object
-        (
-            [status:Ip2c\Http\Response:private] => 1
-            [iso2:Ip2c\Http\Response:private] => US
-            [iso3:Ip2c\Http\Response:private] => USA
-            [name:Ip2c\Http\Response:private] => United States
-        )
-
-)
+    Status: 1
+    Iso2: ES
+    Iso3: ESP
+    Name: Spain
 ```
