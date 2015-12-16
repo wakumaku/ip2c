@@ -13,7 +13,7 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
 
     public function setUp()
     {
-        $this->sut = new Response();
+        $this->sut = new Response('1;ES;ESP;Spain');
     }
 
     public function testShouldBeInstantiated()
@@ -25,12 +25,12 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
     public function testShouldReturnData($response, $status, $iso2, $iso3, $name)
     {
 
-        $response = $this->sut->parseResult($response);
+        $responseObj = new Response($response);
 
-        $this->assertEquals($response->status(), $status);
-        $this->assertEquals($response->iso2(), $iso2);
-        $this->assertEquals($response->iso3(), $iso3);
-        $this->assertEquals($response->name(), $name);
+        $this->assertEquals($responseObj->status(), $status);
+        $this->assertEquals($responseObj->iso2(), $iso2);
+        $this->assertEquals($responseObj->iso3(), $iso3);
+        $this->assertEquals($responseObj->name(), $name);
     }
 
     public function responses()
@@ -49,7 +49,7 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
      */
     public function testShouldRaiseException()
     {
-        $this->sut->parseResult('1;ES;ESP');
+        $responseObj = new Response('1;ES;ESP');
     }
 
 

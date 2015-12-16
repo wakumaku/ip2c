@@ -14,14 +14,12 @@ class Ip2cTest extends \PHPUnit_Framework_TestCase
     public function setUp()
     {
         $request = $this->prophesize('Ip2c\Http\Request');
-        $response = $this->prophesize('Ip2c\Http\Response');
         $ipUtil = $this->prophesize('Ip2c\Ip\IpUtil');
 
         $stringResult = '1;ES;ESP;Spain';
         $request->doRequest(Argument::any(), Argument::any())->willReturn($stringResult);
-        $response->parseResult($stringResult)->willReturn($response->reveal());
 
-        $this->sut = new Ip2c($request->reveal(), $response->reveal(), $ipUtil->reveal());
+        $this->sut = new Ip2c($request->reveal(), $ipUtil->reveal());
     }
 
     public function testShouldBeInstantiated()
