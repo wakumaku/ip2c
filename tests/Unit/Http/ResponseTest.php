@@ -3,7 +3,6 @@
 namespace Ip2c\Test\Unit;
 
 use Ip2c\Http\Response;
-use Prophecy\Argument;
 
 class ResponseTest extends \PHPUnit_Framework_TestCase
 {

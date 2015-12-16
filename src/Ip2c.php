@@ -37,21 +37,21 @@ class Ip2c
     }
 
     /**
-     * @param int $ip2long
-     * @return Response
-     */
-    public function dec($ip2long)
-    {
-        return $this->doRequest($this->queryStringDec . $ip2long);
-    }
-
-    /**
      * @param string $ip
      * @return Response
      */
     public function ip($ip)
     {
         return $this->dec($this->ipUtil->ip2long($ip));
+    }
+
+    /**
+     * @param int $ip2long
+     * @return Response
+     */
+    public function dec($ip2long)
+    {
+        return $this->doRequest($this->queryStringDec . $ip2long);
     }
 
     /**
