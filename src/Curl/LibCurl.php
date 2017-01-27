@@ -14,47 +14,47 @@ class LibCurl
     }
 
     /**
-     * @param resource $ch
+     * @param resource $curlHandler
      * @param int $option
      * @param mixed $value
      */
-    public function setOpt($ch, $option, $value)
+    public function setOpt($curlHandler, $option, $value)
     {
-        curl_setopt($ch, $option, $value);
+        curl_setopt($curlHandler, $option, $value);
     }
 
     /**
-     * @param resource $ch
+     * @param resource $curlHandler
      * @return mixed
      */
-    public function exec($ch)
+    public function exec($curlHandler)
     {
-        return curl_exec($ch);
+        return curl_exec($curlHandler);
     }
 
     /**
-     * @param resource $ch
+     * @param resource $curlHandler
      * @return int
      */
-    public function errno($ch)
+    public function errno($curlHandler)
     {
-        return curl_errno($ch);
+        return curl_errno($curlHandler);
     }
 
     /**
-     * @param resource $ch
+     * @param resource $curlHandler
      * @return string
      */
-    public function error($ch)
+    public function error($curlHandler)
     {
-        return curl_error($ch);
+        return curl_error($curlHandler);
     }
 
     /**
-     * @param resource $ch
+     * @param resource $curlHandler
      */
-    public function close($ch)
+    public function close($curlHandler)
     {
-        curl_close($ch);
+        curl_close($curlHandler);
     }
 }
