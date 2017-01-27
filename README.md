@@ -1,5 +1,6 @@
 # ip2c - Ip to Country PHP library
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/f3b79520d6a24dcd991fc294e45aff87)](https://www.codacy.com/app/wakumaku/ip2c?utm_source=github.com&utm_medium=referral&utm_content=wakumaku/ip2c&utm_campaign=badger)
 [![Build Status](https://scrutinizer-ci.com/g/wakumaku/ip2c/badges/build.png?b=master)](https://scrutinizer-ci.com/g/wakumaku/ip2c/build-status/master)
 [![Code Coverage](https://scrutinizer-ci.com/g/wakumaku/ip2c/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/wakumaku/ip2c/?branch=master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/wakumaku/ip2c/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/wakumaku/ip2c/?branch=master)
